@@ -53,7 +53,7 @@ begin
   mmoEtl.Lines.Add('');
   mmoEtl.Lines.Add('DECLARE CUR_GET_'+edtNomeCursor.Text+' CURSOR FOR');
   mmoEtl.Lines.Add('SELECT');
-  mmoEtl.Lines.Add(StringReplace(edtColunasOrigem.Text, ',', ',' + #10#13, [rfIgnoreCase]));
+  mmoEtl.Lines.Add(edtColunasOrigem.Text);
   mmoEtl.Lines.Add('FROM ' + edtTabelaOriginal.Text + ' ORIGEM');
   mmoEtl.Lines.Add('WHERE NOT EXISTS (SELECT ' + edtColunasDestino.Text + ' FROM ' + edtTabelaDestino.Text + ')');
   mmoEtl.Lines.Add('');

@@ -20,10 +20,6 @@ object FrmPrincipal: TFrmPrincipal
     Height = 327
     Align = alClient
     TabOrder = 0
-    ExplicitLeft = 312
-    ExplicitTop = 176
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object lblTabelaOriginal: TLabel
       Left = 9
       Top = 40
@@ -155,9 +151,6 @@ object FrmPrincipal: TFrmPrincipal
     Height = 41
     Align = alBottom
     TabOrder = 1
-    ExplicitLeft = -88
-    ExplicitTop = -32
-    ExplicitWidth = 185
     object btnGerar: TSpeedButton
       Left = 423
       Top = 1
