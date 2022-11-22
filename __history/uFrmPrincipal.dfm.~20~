@@ -1,0 +1,185 @@
+object FrmPrincipal: TFrmPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'Gerador de ETLs'
+  ClientHeight = 368
+  ClientWidth = 505
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pnlFundo: TPanel
+    Left = 0
+    Top = 0
+    Width = 505
+    Height = 327
+    Align = alClient
+    TabOrder = 0
+    ExplicitLeft = 312
+    ExplicitTop = 176
+    ExplicitWidth = 185
+    ExplicitHeight = 41
+    object lblTabelaOriginal: TLabel
+      Left = 9
+      Top = 12
+      Width = 101
+      Height = 17
+      Caption = 'Tabela original:'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Yu Gothic'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object lblColunasOriginal: TLabel
+      Left = 9
+      Top = 39
+      Width = 56
+      Height = 17
+      Caption = 'Colunas:'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Yu Gothic'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object lblTabelaDestino: TLabel
+      Left = 9
+      Top = 71
+      Width = 100
+      Height = 17
+      Caption = 'Tabela destino:'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Yu Gothic'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object lblColunasDestino: TLabel
+      Left = 9
+      Top = 98
+      Width = 56
+      Height = 17
+      Caption = 'Colunas:'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Yu Gothic'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object lblNomeCursor: TLabel
+      Left = 9
+      Top = 145
+      Width = 119
+      Height = 17
+      Caption = 'Nome para cursor:'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Yu Gothic'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object pnlMemo: TPanel
+      Left = 1
+      Top = 168
+      Width = 503
+      Height = 158
+      Align = alBottom
+      TabOrder = 0
+      object mmoEtl: TMemo
+        Left = 1
+        Top = 1
+        Width = 501
+        Height = 156
+        Align = alClient
+        TabOrder = 0
+        ExplicitLeft = 231
+        ExplicitTop = 80
+        ExplicitWidth = 185
+        ExplicitHeight = 89
+      end
+    end
+    object edtTabelaOriginal: TEdit
+      Left = 116
+      Top = 12
+      Width = 373
+      Height = 21
+      TabOrder = 1
+    end
+    object edtColunasOrigem: TEdit
+      Left = 116
+      Top = 39
+      Width = 373
+      Height = 21
+      TabOrder = 2
+    end
+    object edtColunasDestino: TEdit
+      Left = 116
+      Top = 98
+      Width = 373
+      Height = 21
+      TabOrder = 3
+    end
+    object edtTabelaDestino: TEdit
+      Left = 115
+      Top = 71
+      Width = 373
+      Height = 21
+      TabOrder = 4
+    end
+  end
+  object pnlBotoes: TPanel
+    Left = 0
+    Top = 327
+    Width = 505
+    Height = 41
+    Align = alBottom
+    TabOrder = 1
+    ExplicitLeft = -88
+    ExplicitTop = -32
+    ExplicitWidth = 185
+    object btnGerar: TSpeedButton
+      Left = 423
+      Top = 1
+      Width = 81
+      Height = 39
+      Align = alRight
+      Caption = 'Gerar'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Yu Gothic'
+      Font.Style = [fsBold]
+      ParentFont = False
+      OnClick = btnGerarClick
+      ExplicitTop = 4
+    end
+    object btnFechar1: TSpeedButton
+      Left = 1
+      Top = 1
+      Width = 81
+      Height = 39
+      Align = alLeft
+      Caption = 'Fechar'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Yu Gothic'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ExplicitLeft = 312
+      ExplicitTop = 6
+      ExplicitHeight = 32
+    end
+  end
+end
