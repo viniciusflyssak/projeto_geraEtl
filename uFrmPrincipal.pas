@@ -55,7 +55,7 @@ begin
   mmoEtl.Lines.Add('SELECT');
   mmoEtl.Lines.Add(edtColunasOrigem.Text);
   mmoEtl.Lines.Add('FROM ' + edtTabelaOriginal.Text + ' ORIGEM');
-  mmoEtl.Lines.Add('WHERE NOT EXISTS (SELECT ' + edtColunasDestino.Text + ' FROM ' + edtTabelaDestino.Text + ')');
+  mmoEtl.Lines.Add('WHERE NOT EXISTS (SELECT ' + edtColunasDestino.Text + ' FROM ' + edtTabelaDestino.Text + ');');
   mmoEtl.Lines.Add('');
   mmoEtl.Lines.Add('BEGIN');
   mmoEtl.Lines.Add(' OPEN CUR_GET_'+edtNomeCursor.Text+'; ');
@@ -63,8 +63,8 @@ begin
   mmoEtl.Lines.Add('    FETCH CUR_GET_'+edtNomeCursor.Text+' INTO V_LINHA; ');
   mmoEtl.Lines.Add('    EXIT WHEN V_LINHA IS NULL;');
   mmoEtl.Lines.Add('    RAISE NOTICE ''REGISTRO %'', V_LINHA;');
-  mmoEtl.Lines.Add('    INSERT INTO ' + edtTabelaDestino.Text );
-  mmoEtl.Lines.Add('   (' + edtColunasDestino.Text + ') VALUES V_LINHA.' + StringReplace(edtColunasOrigem.Text, ', ', ', V_LINHA.', [rfIgnoreCase]));
+  mmoEtl.Lines.Add('    INSERT INTO ' + edtTabelaDestino.Text);
+  mmoEtl.Lines.Add('   (' + edtColunasDestino.Text + ') VALUES (V_LINHA.' + StringReplace(edtColunasOrigem.Text, ', ', ', V_LINHA.', [rfIgnoreCase]) +');');
   mmoEtl.Lines.Add(' END LOOP; ');
   mmoEtl.Lines.Add(' CLOSE CUR_GET_'+edtNomeCursor.Text+'; ');
   mmoEtl.Lines.Add('END;');
